@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>List of requests</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <nav id="logout">
+                <a href=#>
+                    <div class="form-actions form-group">
+                        <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                    </div>
+                </a>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/icon/logo.png" alt="INVENTEVENT" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="make-a-request.html">
+                                <i class="fa fa-question-circle"></i>MAKE A NEW REQUEST</a>
+                        </li>
+                        <li>
+                            <a href=#>
+                                <i class="fa fa-align-justify"></i>REQUESTS</a>
+                        </li>
+                        <li>
+                            <a href="list-of-offers.html">
+                                <i class="fa fa-file-text"></i>OFFERS</a>
+                        </li>  
+                        <li>
+                            <a href="list-of-orders.html">
+                                <i class="far fa-check-square"></i>ORDERS</a>
+                        </li>              
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <nav id="logout">
+                    <a href=#>Hello, Mark Smith!</a>
+                    <a href="logout.html">
+                        <div class="form-actions form-group">
+                            <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                        </div>
+                    </a>
+                </nav>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">                                               
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE -->
+                                <h3 class="title-5 m-b-35">List of request</h3>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Request #</th>
+                                                <th>Date of request</th>
+                                                <th>Date of event</th>                                              
+                                                <th>Status</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-shadow">                                                
+                                                <td>7</td>
+                                                <td>29.03.2021</td>
+                                                <td>30.12.2021</td>
+                                                <td>01.04.2021</td>
+                                                <td><span class="status--declined">not finished</span></td>
+                                                <th><button onclick="myFunction1()">see details</button></th>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">                                                
+                                                <td>11</td>
+                                                <td>25.04.2021</td>
+                                                <td>01.05.2021</td>
+                                                <td>28.04.2021</td>
+                                                <td><span class="status--approved">finished, <a href="list-of-offers.html#offer_details_11">see offer</a></span></td>
+                                                <th><button onclick="myFunction2()">see details</button></th>
+                                            </tr>                                            
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">                                                
+                                                <td>17</td>
+                                                <td>26.04.2021</td>
+                                                <td>30.05.2021</td>
+                                                <td>29.04.2021</td>
+                                                <td><span class="status--waiting">active</span></td>
+                                                <th><button onclick="myFunction3()">see details</button></th>
+                                            </tr>
+                                            </tr>                              
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE -->
+                            </div>
+                            <script>
+                                function myFunction1() {
+                                var x = document.getElementById("Request_details_7");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                                }
+                            </script>
+                            <script>
+                                function myFunction2() {
+                                var x = document.getElementById("Request_details_11");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                                }
+                            </script>
+                            <script>
+                                function myFunction3() {
+                                var x = document.getElementById("Request_details_17");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                                }
+                            </script>
+                            <!-- DATA TABLE -->
+                            <div id="Request_details_7" class="popup">
+                                <br>
+                                <h3 class="title-5 m-b-35" >Request details</h3>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Request #</th>
+                                                <th>Date of event</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Type</th>
+                                                <th>Duration, h</th>
+                                                <th>Size, m2</th>
+                                                <th>Address</th>
+                                                <th>Persons</th>
+                                                <th>Price per event, eur</th>
+                                                <th>Booking status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="location">location</td>
+                                                <td>7</td>
+                                                <td>01.04.2021</td>
+                                                <td>Castle ABC</td>
+                                                <td>appx. capacity 50 persons</td>
+                                                <td>backyard</td>
+                                                <td>12</td>
+                                                <td>200</td>
+                                                <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                <td></td>
+                                                <td>500,00</td>
+                                                <td>
+                                                    <span class="status--declined">declined</span>
+                                                </td>
+                                            </tr>                                            
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="catering">catering</td>
+                                                <td>7</td>
+                                                <td>01.04.2021</td>
+                                                <td>Catering ABC</td>
+                                                <td>buffet</td>
+                                                <td>mixed</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                                                
+                                                <td>50</td>
+                                                <td>1000,00</td>
+                                                <td>
+                                                    <span class="status--waiting">waiting for answer</span>
+                                                </td>
+                                            </tr>                                                                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="Request_details_11" class="popup">
+                                <br>
+                                <h3 class="title-5 m-b-35">Request details</h3>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Request #</th>
+                                                <th>Date of event</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Type</th>
+                                                <th>Duration, h</th>
+                                                <th>Size, m2</th>
+                                                <th>Address</th>
+                                                <th>Persons</th>
+                                                <th>Price per event, eur</th>
+                                                <th>Booking status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-shadow">
+                                                <td class="location">location</td>
+                                                <td>11</td>
+                                                <td>01.05.2021</td>
+                                                <td>Castle ABC</td>
+                                                <td>Appx. capacity 20 persons</td>
+                                                <td>room</td>
+                                                <td>12</td>
+                                                <td>100</td>
+                                                <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                <td></td>
+                                                <td>200,00</td>
+                                                <td><span class="status--declined">declined</span></td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="location">location</td>
+                                                <td>11</td>
+                                                <td>01.05.2021</td>
+                                                <td>Castle ABC</td>
+                                                <td>2nd floor, appx. capacity 70 persons</td>
+                                                <td>room</td>
+                                                <td>12</td>
+                                                <td>300</td>
+                                                <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                <td></td>
+                                                <td>600,00</td>
+                                                <td>
+                                                    <span class="status--approved">approved</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="location">location</td>
+                                                <td>11</td>
+                                                <td>01.05.2021</td>
+                                                <td>Castle ABC</td>
+                                                <td>appx. capacity 50 persons</td>
+                                                <td>backyard</td>
+                                                <td>12</td>
+                                                <td>200</td>
+                                                <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                <td></td>
+                                                <td>500,00</td>
+                                                <td>
+                                                    <span class="status--approved">approved</span>
+                                                </td>
+                                            </tr>                                            
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="catering">catering</td>
+                                                <td>11</td>
+                                                <td>01.05.2021</td>
+                                                <td>Catering ABC</td>
+                                                <td>buffet</td>
+                                                <td>mixed</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                                                
+                                                <td>50</td>
+                                                <td>1000,00</td>
+                                                <td>
+                                                    <span class="status--approved">approved</span>
+                                                </td>
+                                            </tr>                                            
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="entertainment">entertainment</td>
+                                                <td>11</td>
+                                                <td>01.05.2021</td>
+                                                <td>Singer X</td>
+                                                <td>1 signer, minimum 8 songs</td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>                                                
+                                                <td></td>
+                                                <td>500,00</td>
+                                                <td>
+                                                    <span class="status--waiting">waiting for answer</span>
+                                                </td>
+                                            </tr>                              
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="Request_details_17" class="popup">
+                                <br>
+                                <h3 class="title-5 m-b-35">Request details</h3>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Request #</th>
+                                                <th>Date of event</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Type</th>
+                                                <th>Duration, h</th>
+                                                <th>Size, m2</th>
+                                                <th>Address</th>
+                                                <th>Persons</th>
+                                                <th>Price per event, eur</th>
+                                                <th>Booking status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="location">location</td>
+                                                <td>17</td>
+                                                <td>30.05.2021</td>
+                                                <td>Castle ABC</td>
+                                                <td>appx. capacity 50 persons</td>
+                                                <td>backyard</td>
+                                                <td>12</td>
+                                                <td>200</td>
+                                                <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                <td></td>
+                                                <td>500,00</td>
+                                                <td>
+                                                    <span class="status--waiting">waiting for answer</span>
+                                                </td>
+                                            </tr>                                            
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td class="catering">catering</td>
+                                                <td>17</td>
+                                                <td>30.05.2021</td>
+                                                <td>Catering ABC</td>
+                                                <td>buffet</td>
+                                                <td>mixed</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                                                
+                                                <td>50</td>
+                                                <td>1000,00</td>
+                                                <td>
+                                                    <span class="status--waiting">waiting for answer</span>
+                                                </td>
+                                            </tr>                                                                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
