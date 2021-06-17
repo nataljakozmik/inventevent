@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>List of orders</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <nav class="navigation-bar">
+                <a href="/logout.html">
+                    <div class="form-actions form-group">
+                        <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                    </div>
+                </a>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href=#>
+                    <img src="images/icon/logo.png" alt="INVENTEVENT" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="list-of-orders-em.html">
+                                <i class="far fa-check-square"></i>ORDERS</a>
+                        </li>               
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">event manager</span> John Johnson!</a>
+                    <a href="logout.html">
+                        <div class="form-actions form-group">
+                            <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                        </div>
+                    </a>
+                </nav>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">                                               
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE -->
+                                <h3 class="title-5 m-b-35">List of orders</h3>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>                                                
+                                                <th>Order #</th>                                                
+                                                <th>Date of event</th>                                              
+                                                <th>Client name</th>
+                                                <th>Contact person></th>
+                                                <th></th>
+                                                <th>Phone</th>
+                                                <th>Event status</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-shadow">                                                
+                                                <td>2021040041</td>
+                                                <td>01.05.2021</td>
+                                                <td>Company ZX</td>
+                                                <td class="chat_name">Mark Smith</td>
+                                                <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionMarkSmith()" title="Contact">@</button></td>                                                
+                                                <td>+372 52 222 222</td>
+                                                <td><span class="status--waiting">upcoming</span></td>
+                                                <td><button onclick="Order2021040041_deatils()"  title="Additional information"  class="see-details">see details</button></td>
+                                            </tr>
+                                            <tr class="spacer"></tr> 
+                                            <!--2. row-->   
+                                            <tr class="tr-shadow">                                                
+                                                <td>2021040051</td>
+                                                <td>06.09.2021</td>
+                                                <td>Company QWE</td>
+                                                <td class="chat_name">Alice Carlsson</td>
+                                                <td><button class="open-button" onclick="openForm(),FunctionHide(), FunctionAliceCarlsson()" title="Contact">@</button></td>                                                
+                                                <td>+372 51 111 111</td>
+                                                <td><span class="status--waiting">upcoming</span></td>
+                                                <td><button onclick="Order2021040051_deatils()"  title="Additional information"  class="see-details">see details</button></td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <!--3. row--> 
+                                            <tr class="tr-shadow">                                                
+                                                <td>2021040059</td>
+                                                <td>10.10.2021</td>
+                                                <td>Company QWE</td>
+                                                <td class="chat_name">Alice Carlsson</td>
+                                                <td><button class="open-button" onclick="openForm(), FunctionAliceCarlsson()" title="Contact">@</button></td>                                                
+                                                <td>+372 51 111 111</td>
+                                                <td><span class="status--waiting">upcoming</span></td>
+                                                <td><button onclick="Order2021040059_deatils()"  title="Additional information"  class="see-details">see details</button></td>
+                                            </tr>
+                                            <tr class="spacer"></tr>                         
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE --> 
+                                <!--SCRIPTS-->             
+                                <script>
+                                    function Order2021040041_deatils() {
+                                    var x = document.getElementById("Order2021040041");
+                                    if (x.style.display === "none") {
+                                        x.style.display = "block";
+                                    } else {
+                                        x.style.display = "none";
+                                    }
+                                    }
+                                </script>
+                                <script>
+                                    function Order2021040051_deatils() {
+                                    var x = document.getElementById("Order2021040051");
+                                    if (x.style.display === "none") {
+                                        x.style.display = "block";
+                                    } else {
+                                        x.style.display = "none";
+                                    }
+                                    }                         
+                                </script>
+                                <script>
+                                    function Order2021040059_deatils() {
+                                    var x = document.getElementById("Order2021040059");
+                                    if (x.style.display === "none") {
+                                        x.style.display = "block";
+                                    } else {
+                                        x.style.display = "none";
+                                    }
+                                    }
+                                </script>
+                                <script>
+                                    function FunctionAliceCarlsson() {                                        
+                                        document.getElementById("AliceCarlssonImg").style.display = "block";
+                                        document.getElementById("AliceCarlssonImgTiny").style.display = "block";
+                                        document.getElementById("AliceCarlsson").style.display = "block";             
+                                    }                             
+                                </script>
+                                <script>
+                                    function FunctionBenCarlsson() {
+                                        document.getElementById("BenCarlssonImg").style.display = "block";
+                                        document.getElementById("BenCarlssonImgTiny").style.display = "block";
+                                        document.getElementById("BenCarlsson").style.display = "block";
+                                                }                                        
+                                </script>
+                                <script>
+                                    function FunctionMarkSmith() {
+                                        document.getElementById("MarkSmith").style.display = "block";
+                                        document.getElementById("MarkSmithImg").style.display = "block";
+                                        document.getElementById("MarkSmithImgTiny").style.display = "block";  
+                                    }  
+                                </script>
+                                <script>
+                                    function FunctionJaneCarlsson() {
+                                        document.getElementById("JaneCarlsson").style.display = "block";
+                                        document.getElementById("JaneCarlssonImg").style.display = "block";
+                                        document.getElementById("JaneCarlssonImgTiny").style.display = "block";
+                                    }  
+                                </script>
+                                <script>
+                                    function FunctionStefanParker() {
+                                        document.getElementById("StefanParker").style.display = "block";
+                                        document.getElementById("StefanParkerImg").style.display = "block";
+                                        document.getElementById("StefanParkerImgTiny").style.display = "block";}  
+                                </script>
+                                <script>
+                                    function FunctionHide() {
+                                        document.getElementById("MarkSmith").style.display = "none";
+                                        document.getElementById("MarkSmithImg").style.display = "none";
+                                        document.getElementById("MarkSmithImgTiny").style.display = "none";
+                                        document.getElementById("AliceCarlssonImg").style.display = "none";
+                                        document.getElementById("AliceCarlssonImgTiny").style.display = "none";
+                                        document.getElementById("AliceCarlsson").style.display = "none";
+                                        document.getElementById("BenCarlssonImg").style.display = "none";
+                                        document.getElementById("BenCarlssonImgTiny").style.display = "none";
+                                        document.getElementById("BenCarlsson").style.display = "none";
+                                        document.getElementById("JaneCarlsson").style.display = "none";
+                                        document.getElementById("JaneCarlssonImg").style.display = "none";
+                                        document.getElementById("JaneCarlssonImgTiny").style.display = "none";   
+                                        document.getElementById("StefanParker").style.display = "none";
+                                        document.getElementById("StefanParkerImg").style.display = "none";
+                                        document.getElementById("StefanParkerImgTiny").style.display = "none";}                                                                                                                 
+                                </script>  
+                                <br>                              
+                                <!--ORDER DETAILS-->
+                                <div id="Order2021040041" class="popup">
+                                    <br>
+                                    <h3 class="title-5 m-b-35" >Order details</h3>
+                                    <div class="table-responsive table-responsive-data2">
+                                        <table class="table table-data2">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Order #</th>
+                                                    <th>Name of service</th>
+                                                    <th>Contact person</th>
+                                                    <th></th>
+                                                    <th>Phone</th>
+                                                    <th>Description</th>
+                                                    <th>Type</th>
+                                                    <th>Duration, h</th>
+                                                    <th>Size, m2</th>
+                                                    <th>Address</th>
+                                                    <th>Persons</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="location">location</td>
+                                                    <td>2021040041</td>
+                                                    <td>Castle ABC</td>
+                                                    <td class="service_provider">Ben Carlsson</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionBenCarlsson()" title="Contact">@</button></td>
+                                                    <td>+372 53 333 333</td>
+                                                    <td>2nd floor, appx. capacity 70 persons</td>
+                                                    <td>room</td>
+                                                    <td>12</td>
+                                                    <td>300</td>
+                                                    <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                    <td></td>
+                                                </tr>   
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="location">location</td>
+                                                    <td>2021040041</td>
+                                                    <td>Castle ABC</td>
+                                                    <td class="service_provider">Ben Carlsson</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionBenCarlsson()" title="Contact">@</button></td>
+                                                    <td>+372 53 333 333</td>
+                                                    <td>Appx. capacity 50 persons</td>
+                                                    <td>back yard</td>
+                                                    <td>12</td>
+                                                    <td>200</td>
+                                                    <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                    <td></td>
+                                                </tr>                                           
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="catering">catering</td>
+                                                    <td>2021040041</td>
+                                                    <td>Catering ABC</td>
+                                                    <td class="service_provider">Jane Carlsson</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionJaneCarlsson()" title="Contact">@</button></td>
+                                                    <td>+372 53 333 334</td>
+                                                    <td>buffet</td>
+                                                    <td>mixed</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>                                                
+                                                    <td>50</td>
+                                                </tr>     
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="entertainment">entertainment</td>
+                                                    <td>2021040041</td>
+                                                    <td>Singer X</td>
+                                                    <td class="service_provider">Stefan Parker</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionStefanParker()" title="Contact">@</button></td>
+                                                    <td>+372 54 444 444</td>
+                                                    <td>1 singer, minimum 8 songs</td>
+                                                    <td></td>
+                                                    <td>1</td>
+                                                    <td></td>
+                                                    <td></td>                                                
+                                                    <td></td>
+                                                </tr>                                                                  
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="Order2021040051" class="popup">
+                                    <br>
+                                    <h3 class="title-5 m-b-35" >Order details</h3>
+                                    <div class="table-responsive table-responsive-data2">
+                                        <table class="table table-data2">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Order #</th>
+                                                    <th>Name of service</th>
+                                                    <th>Contact person</th>
+                                                    <th></th>
+                                                    <th>Phone</th>
+                                                    <th>Description</th>
+                                                    <th>Type</th>
+                                                    <th>Duration, h</th>
+                                                    <th>Size, m2</th>
+                                                    <th>Address</th>
+                                                    <th>Persons</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="location">location</td>
+                                                    <td>2021040051</td>
+                                                    <td>Castle ABC</td>
+                                                    <td class="service_provider">Ben Carlsson</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionBenCarlsson()" title="Contact">@</button></td>
+                                                    <td>+372 53 333 333</td>
+                                                    <td>2nd floor, appx. capacity 70 persons</td>
+                                                    <td>room</td>
+                                                    <td>2</td>
+                                                    <td>70</td>
+                                                    <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                    <td></td>
+                                                </tr>   
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="location">location</td>
+                                                    <td>2021040041</td>
+                                                    <td>Castle ABC</td>
+                                                    <td class="service_provider">Ben Carlsson</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionBenCarlsson()" title="Contact">@</button></td>
+                                                    <td>+372 53 333 333</td>
+                                                    <td>Appx. capacity 50 persons</td>
+                                                    <td>back yard</td>
+                                                    <td>2</td>
+                                                    <td>40</td>
+                                                    <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                    <td></td>
+                                                </tr>                                           
+                                                <tr class="spacer"></tr>                                                                                                    
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="Order2021040059" class="popup">
+                                    <br>
+                                    <h3 class="title-5 m-b-35" >Order details</h3>
+                                    <div class="table-responsive table-responsive-data2">
+                                        <table class="table table-data2">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Order #</th>
+                                                    <th>Name of service</th>
+                                                    <th>Contact person</th>
+                                                    <th></th>
+                                                    <th>Phone</th>
+                                                    <th>Description</th>
+                                                    <th>Type</th>
+                                                    <th>Duration, h</th>
+                                                    <th>Size, m2</th>
+                                                    <th>Address</th>
+                                                    <th>Persons</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                                                    
+                                                <tr class="spacer"></tr>
+                                                <tr class="tr-shadow">
+                                                    <td class="entertainment">entertainment</td>
+                                                    <td>2021040041</td>
+                                                    <td>Singer X</td>
+                                                    <td>Stefan Parker</td>
+                                                    <td><button class="open-button" onclick="openForm(),FunctionHide(),FunctionStefanParker()" title="Contact">@</button></td>
+                                                    <td>+372 54 444 444</td>
+                                                    <td>1 singer, minimum 8 songs</td>
+                                                    <td></td>
+                                                    <td>1</td>
+                                                    <td></td>
+                                                    <td></td>                                                
+                                                    <td></td>
+                                                </tr>                                                                  
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>                                            
+                                <script>
+                                 function openForm() {
+                                    document.getElementById("Message_window").style.display = "block";
+                                  }
+                                  
+                                  function closeForm() {
+                                    document.getElementById("Message_window").style.display = "none";
+                                    document.getElementById("MarkSmithImg").style.display = "none";
+                                    document.getElementById("AliceCarlssonImg").style.display = "none";
+                                    document.getElementById("BenCarlssonImg").style.display = "none";
+                                    document.getElementById("JaneCarlssonImg").style.display = "none";
+                                    document.getElementById("StefanParkerImg").style.display = "none";                                    
+                                    document.getElementById("MarkSmithImgTiny").style.display = "none";
+                                    document.getElementById("AliceCarlssonImgTiny").style.display = "none";
+                                    document.getElementById("BenCarlssonImgTiny").style.display = "none";
+                                    document.getElementById("JaneCarlssonImgTiny").style.display = "none";
+                                    document.getElementById("StefanParkerImgTiny").style.display = "none";                                    
+                                    document.getElementById("MarkSmith").style.display = "none";
+                                    document.getElementById("AliceCarlsson").style.display = "none";
+                                    document.getElementById("BenCarlsson").style.display = "none";
+                                    document.getElementById("JaneCarlsson").style.display = "none";
+                                    document.getElementById("StefanParker").style.display = "none";
+                                    
+                                  }
+                                </script>
+                                <div class="chat-popup" id="Message_window"> <!--class="col-lg-6"-->
+                                    <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+
+                                        <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                            <div class="bg-overlay bg-overlay--blue"></div>
+                                            <h3>
+                                                <i class="zmdi zmdi-comment-text"></i>New Messages
+                                            </h3>
+                                            <button type="button" class="au-input-icon" onclick="closeForm()">
+                                                <i class="fa fa-times-circle"></i>                                               
+                                            </button>                                             
+                                            <button class="au-btn-plus">
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </button>
+                                            
+                                        </div>
+                                        <div class="au-inbox-wrap js-inbox-wrap">                                            
+                                            <div class="au-chat">
+                                                <div class="au-chat__title">
+                                                    <div class="au-chat-info">
+                                                        <div class="avatar-wrap online">
+                                                            <div class="avatar avatar--small">
+                                                                <img src="images/icon/avatar-06.jpg" alt="Mark Smith" id="MarkSmithImg" class="popup">
+                                                                <img src="images/icon/avatar-02.jpg" alt="Alice Carlsson" id="AliceCarlssonImg" class="popup">
+                                                                <img src="images/icon/avatar-03.jpg" alt="Ben Carlsson" id="BenCarlssonImg" class="popup">
+                                                                <img src="images/icon/avatar-07.jpg" alt="Jane Carlsson" id="JaneCarlssonImg" class="popup">
+                                                                <img src="images/icon/avatar-01.jpg" alt="Stefan Parker" id="StefanParkerImg" class="popup">
+                                                            </div>
+                                                        </div>
+                                                        <span class="nick">                                                            
+                                                            <p class="popup" id="MarkSmith">Mark Smith</p>
+                                                            <p class="popup" id="AliceCarlsson">Alice Carlsson</p>        
+                                                            <p class="popup" id="BenCarlsson">Ben Carlsson</p>
+                                                            <p class="popup" id="JaneCarlsson">Jane Carlsson</p>              
+                                                            <p class="popup" id="StefanParker">Stefan Parker</p>                                                    
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="au-chat__content">
+                                                    <div class="recei-mess-wrap">
+                                                        <span class="mess-time">12 Min ago</span>
+                                                        <div class="recei-mess__inner">
+                                                            <div class="avatar avatar--tiny">
+                                                                <img src="images/icon/avatar-06.jpg" alt="Mark Smith" id="MarkSmithImgTiny" class="popup">
+                                                                <img src="images/icon/avatar-02.jpg" alt="Alice Carlsson" id="AliceCarlssonImgTiny" class="popup">
+                                                                <img src="images/icon/avatar-03.jpg" alt="Ben Carlsson" id="BenCarlssonImgTiny" class="popup">
+                                                                <img src="images/icon/avatar-07.jpg" alt="Jane Carlsson" id="JaneCarlssonImgTiny" class="popup">
+                                                                <img src="images/icon/avatar-01.jpg" alt="Stefan Parker" id="StefanParkerImgTiny" class="popup">
+                                                            </div>
+                                                            <div class="recei-mess-list">
+                                                                <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                                <div class="recei-mess">Donec tempor, sapien ac viverra</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="send-mess-wrap">
+                                                        <span class="mess-time">30 Sec ago</span>
+                                                        <div class="send-mess__inner">
+                                                            <div class="send-mess-list">
+                                                                <div class="send-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-chat-textfield">
+                                                    <form class="au-form-icon">
+                                                        <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message" >
+                                                        <button class="au-input-icon" type="submit">
+                                                            SEND
+                                                        </button>                                                                                               
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
