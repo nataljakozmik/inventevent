@@ -39,7 +39,7 @@
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
-            <nav id="logout">
+            <nav class="navigation-bar">
                 <a href=#>
                     <div class="form-actions form-group">
                         <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
@@ -85,8 +85,8 @@
         <div class="page-container">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <nav id="logout">
-                    <a href=#>Hello, Mark Smith!</a>
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">client</span> Mark Smith!</a>
                     <a href="logout.html">
                         <div class="form-actions form-group">
                             <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
@@ -94,8 +94,7 @@
                     </a>
                 </nav>
             </header>
-            <!-- HEADER DESKTOP-->
-
+            
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -128,7 +127,7 @@
                                                 <td>01.05.2021</td>
                                                 <td>2600,00</td>
                                                 <td>28.04.2021</td>                                                
-                                                <th><button onclick="myFunction1()">see details</button></th>
+                                                <td><button onclick="myFunction21()" title="Additional information"  class="see-details">see details</button></td>
                                             </tr>
                                             <tr class="spacer"></tr>
                                             <tr class="tr-shadow">                                                
@@ -142,13 +141,13 @@
                                                 <td>30.05.2021</td>
                                                 <td>1200,00</td>
                                                 <td>29.04.2021</td>                                                
-                                                <th><button onclick="myFunction2()">see details</button></th>
-                                            </tr>
-              
+                                                <td><button onclick="myFunction22()"  title="Additional information"  class="see-details">see details</button></td>
+                                            </tr>              
                                         </tbody>
                                     </table>
                                 </div>
                                 <!-- END DATA TABLE -->
+                                <br>
                                 <a href="thank you.html">
                                     <div class="form-actions form-group">
                                         <button type="button" class="btn btn-success btn-sm">MAKE AN ORDER</button>
@@ -156,7 +155,7 @@
                                 </a>
                             </div>
                             <script>
-                                function myFunction1() {
+                                function myFunction21() {
                                 var x = document.getElementById("offer_details_11");
                                 if (x.style.display === "none") {
                                     x.style.display = "block";
@@ -166,7 +165,7 @@
                                 }
                             </script>
                             <script>
-                                function myFunction2() {
+                                function myFunction22() {
                                 var x = document.getElementById("offer_details_17");
                                 if (x.style.display === "none") {
                                     x.style.display = "block";
@@ -269,7 +268,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div>                            
                             <div id="offer_details_17" class="popup">
                                 <br>
                                 <h3 class="title-5 m-b-35">Offer details</h3>

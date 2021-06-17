@@ -39,8 +39,8 @@
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
-            <nav id="logout">
-                <a href=#>
+            <nav class="navigation-bar">
+                <a href="/logout.html">
                     <div class="form-actions form-group">
                         <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
                     </div>
@@ -85,16 +85,15 @@
         <div class="page-container">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <nav id="logout">
-                    <a href=#>Hello, Mark Smith!</a>
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">client</span> Mark Smith!</a>
                     <a href="logout.html">
                         <div class="form-actions form-group">
                             <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
                         </div>
                     </a>
                 </nav>
-            </header>
-            <!-- HEADER DESKTOP-->
+            </header>           
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
@@ -123,7 +122,7 @@
                                                 <td>30.12.2021</td>
                                                 <td>01.04.2021</td>
                                                 <td><span class="status--declined">not finished</span></td>
-                                                <th><button onclick="myFunction1()">see details</button></th>
+                                                <td><button onclick="myFunction1(), myFunction4()"  title="Additional information"  class="see-details">see details</button></td>
                                             </tr>
                                             <tr class="spacer"></tr>
                                             <tr class="tr-shadow">                                                
@@ -131,8 +130,8 @@
                                                 <td>25.04.2021</td>
                                                 <td>01.05.2021</td>
                                                 <td>28.04.2021</td>
-                                                <td><span class="status--approved">finished, <a href="list-of-offers.html#offer_details_11">see offer</a></span></td>
-                                                <th><button onclick="myFunction2()">see details</button></th>
+                                                <td><span class="status--approved">finished, <a href="list-of-offers.html#offer_details_11" class="see-details" title="see offer">see offer #11</a></span></td>
+                                                <td><button onclick="myFunction2()"  title="Additional information"  class="see-details">see details</button></td>
                                             </tr>                                            
                                             <tr class="spacer"></tr>
                                             <tr class="tr-shadow">                                                
@@ -141,21 +140,21 @@
                                                 <td>30.05.2021</td>
                                                 <td>29.04.2021</td>
                                                 <td><span class="status--waiting">active</span></td>
-                                                <th><button onclick="myFunction3()">see details</button></th>
-                                            </tr>
-                                            </tr>                              
+                                                <td><button onclick="myFunction3()"  title="Additional information"  class="see-details">see details</button></td>
+                                            </tr>                             
                                         </tbody>
                                     </table>
                                 </div>
-                                <!-- END DATA TABLE -->
-                            </div>
+                                 <!-- END DATA TABLE -->
+                            <br>
+                            </div>                            
                             <script>
                                 function myFunction1() {
                                 var x = document.getElementById("Request_details_7");
                                 if (x.style.display === "none") {
                                     x.style.display = "block";
                                 } else {
-                                    x.style.display = "none";
+                                    x.style.display = "block";
                                 }
                                 }
                             </script>
@@ -167,7 +166,7 @@
                                 } else {
                                     x.style.display = "none";
                                 }
-                                }
+                                }                         
                             </script>
                             <script>
                                 function myFunction3() {
@@ -180,11 +179,12 @@
                                 }
                             </script>
                             <!-- DATA TABLE -->
-                            <div id="Request_details_7" class="popup">
-                                <br>
-                                <h3 class="title-5 m-b-35" >Request details</h3>
-                                <div class="table-responsive table-responsive-data2">
-                                    <table class="table table-data2">
+                            <div id="Request_details_7" class="popup">  
+                                <div>
+                                    <h3 class="title-5 m-b-35" id="request_number">Request details</h3> 
+                                </div>                                
+                                <div class="table-responsive table-responsive-data2">                                    
+                                    <table class="table table-data2" id="Request-details">
                                         <thead>
                                             <tr>
                                                 <th></th>
@@ -241,6 +241,7 @@
                                 </div>
                             </div>
                             <div id="Request_details_11" class="popup">
+                                <br>
                                 <br>
                                 <h3 class="title-5 m-b-35">Request details</h3>
                                 <div class="table-responsive table-responsive-data2">
@@ -350,6 +351,7 @@
                             </div>
                             <div id="Request_details_17" class="popup">
                                 <br>
+                                <br>
                                 <h3 class="title-5 m-b-35">Request details</h3>
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
@@ -407,7 +409,8 @@
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div>                            
+
                         </div>                      
                         <div class="row">
                             <div class="col-md-12">

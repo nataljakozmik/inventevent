@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Request calculation</title>
+    <title>Calculatrion</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -39,7 +39,7 @@
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
-            <nav id="logout">
+            <nav class="navigation-bar">
                 <a href=#>
                     <div class="form-actions form-group">
                         <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
@@ -52,7 +52,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="images/icon/logo.png" alt="INVENTEVENT" />
                 </a>
             </div>
@@ -85,17 +85,16 @@
         <div class="page-container">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <nav id="logout">
-                    <a href=#>Hello, Mark Smith!</a>
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">client</span> Mark Smith!</a>
                     <a href="logout.html">
                         <div class="form-actions form-group">
                             <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
                         </div>
                     </a>
                 </nav>
-            </header>
-            <!-- HEADER DESKTOP-->
-
+            </header>            
+          
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -412,21 +411,154 @@
                                 <!-- END DATA TABLE -->
                             </div>
                         </div>
+                        <br>
                         <div>
-                            <a href="list-of-requests.html#request_details_11">
+                            <!-- <a href=#confirmation_mesage> -->
                                 <div class="form-actions form-group">
-                                    <button type="button" class="btn btn-success btn-sm">SAVE</button>
+                                    <button onclick="myFunction11()" type="button" class="btn btn-success btn-sm">SAVE</button>
                                 </div>
-                            </a>
+                            <!-- </a> -->
                             <a href="make-a-request.html">
                                 <div class="form-actions form-group">
                                     <button type="button" class="btn btn-success btn-sm">BACK</button>
                                 </div>
                             </a>
-                        </div>                        
-                        <div class="row">
+                        </div>
+                        <script>
+                            function myFunction11() {                      
+                                var x = document.getElementById("message1");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "block";
+                                }
+                            }
+                        </script> 
+                        
+                        <!-- CONFIRMATION MESSAGE-->
+                        <div id="message1" class="popup"> 
+                            <p>Booking request <b><i>#11</i></b> is sent! <button onClick="myFunction12()" class="see-details">see details</button></p>
+                            <script>
+                                function myFunction12() {                                                                        
+                                    var x = document.getElementById("rd_11");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "block";
+                                }
+                            }
+                            </script>                            
+                        </div>
+                        <br>
+                        <div class="popup" id="rd_11">
+                            <h3 class="title-5 m-b-35">Request details</h3>                                        
+                                <div class="table-responsive table-responsive-data2">
+                                            <table class="table table-data2">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Request #</th>
+                                                        <th>Date of event</th>
+                                                        <th>Name</th>
+                                                        <th>Description</th>
+                                                        <th>Type</th>
+                                                        <th>Duration, h</th>
+                                                        <th>Size, m2</th>
+                                                        <th>Address</th>
+                                                        <th>Persons</th>
+                                                        <th>Price per event, eur</th>
+                                                        <th>Booking status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="tr-shadow">
+                                                        <td class="location">location</td>
+                                                        <td>11</td>
+                                                        <td>01.05.2021</td>
+                                                        <td>Castle ABC</td>
+                                                        <td>Appx. capacity 20 persons</td>
+                                                        <td>room</td>
+                                                        <td>12</td>
+                                                        <td>100</td>
+                                                        <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                        <td></td>
+                                                        <td>200,00</td>
+                                                        <td><span class="status--declined">declined</span></td>
+                                                    </tr>
+                                                    <tr class="spacer"></tr>
+                                                    <tr class="tr-shadow">
+                                                        <td class="location">location</td>
+                                                        <td>11</td>
+                                                        <td>01.05.2021</td>
+                                                        <td>Castle ABC</td>
+                                                        <td>2nd floor, appx. capacity 70 persons</td>
+                                                        <td>room</td>
+                                                        <td>12</td>
+                                                        <td>300</td>
+                                                        <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                        <td></td>
+                                                        <td>600,00</td>
+                                                        <td>
+                                                            <span class="status--approved">approved</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="spacer"></tr>
+                                                    <tr class="tr-shadow">
+                                                        <td class="location">location</td>
+                                                        <td>11</td>
+                                                        <td>01.05.2021</td>
+                                                        <td>Castle ABC</td>
+                                                        <td>appx. capacity 50 persons</td>
+                                                        <td>backyard</td>
+                                                        <td>12</td>
+                                                        <td>200</td>
+                                                        <td>1st street, 11111 Tallinn, Estonia</td>                                                
+                                                        <td></td>
+                                                        <td>500,00</td>
+                                                        <td>
+                                                            <span class="status--approved">approved</span>
+                                                        </td>
+                                                    </tr>                                            
+                                                    <tr class="spacer"></tr>
+                                                    <tr class="tr-shadow">
+                                                        <td class="catering">catering</td>
+                                                        <td>11</td>
+                                                        <td>01.05.2021</td>
+                                                        <td>Catering ABC</td>
+                                                        <td>buffet</td>
+                                                        <td>mixed</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>                                                
+                                                        <td>50</td>
+                                                        <td>1000,00</td>
+                                                        <td>
+                                                            <span class="status--approved">approved</span>
+                                                        </td>
+                                                    </tr>                                            
+                                                    <tr class="spacer"></tr>
+                                                    <tr class="tr-shadow">
+                                                        <td class="entertainment">entertainment</td>
+                                                        <td>11</td>
+                                                        <td>01.05.2021</td>
+                                                        <td>Singer X</td>
+                                                        <td>1 signer, minimum 8 songs</td>
+                                                        <td></td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td></td>                                                
+                                                        <td></td>
+                                                        <td>500,00</td>
+                                                        <td>
+                                                            <span class="status--waiting">waiting for answer</span>
+                                                        </td>
+                                                    </tr>                              
+                                                </tbody>
+                                            </table>
+                                </div>                               
+                        </div>                                                                                                                                                                                   
                             <div class="col-md-12">
-                                <div class="copyright">
+                                <div id="copyy" class="popup"> //"copyright"
                                     <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                                 </div>
                             </div>

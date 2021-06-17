@@ -64,7 +64,7 @@
                                 <i class="fa fa-question-circle"></i>MAKE A NEW REQUEST</a>
                         </li>
                         <li>
-                            <a href=#>
+                            <a href="list-of-requests.html">
                                 <i class="fa fa-align-justify"></i>REQUESTS</a>
                         </li>
                         <li>
@@ -85,8 +85,8 @@
         <div class="page-container">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <nav id="logout">
-                    <a href=#>Hello, Mark Smith!</a>
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">client</span> Mark Smith!</a>
                     <a href="logout.html">
                         <div class="form-actions form-group">
                             <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
@@ -95,6 +95,16 @@
                 </nav>
             </header>
             <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <nav class="navigation-bar">
+                    <a href=#>Hello, <span id="role">client</span> Mark Smith!</a>
+                    <a href="logout.html">
+                        <div class="form-actions form-group">
+                            <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                        </div>
+                    </a>
+                </nav>
+            </header>
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
@@ -105,7 +115,7 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">List of orders</h3>
                                 <div class="table-responsive table-responsive-data2">
-                                    <table class="table table-data2">
+                                    <table class="table table-data2" id="mytable">
                                         <thead>
                                             <tr>
                                                 <th></th>
@@ -121,15 +131,15 @@
                                         </thead>
                                         <tbody>
                                             <tr class="tr-shadow">                                                
-                                                <td><a href=#><i class="fa fa-arrow-down" title="Download invoice"></i></a></td>
+                                                <td><a href="invoice.html"><i class="fa fa-arrow-down" title="Download invoice"></i></a></td>
                                                 <td>2021040041</td>
                                                 <td>01.05.2021</td>
-                                                <td>John Johnson</td>
-                                                <td><button class="open-button" onclick="openForm()" title="Contact">@</button></td>                                                
+                                                <td class="event_manager">John Johnson</td>
+                                                <td><button class="open-button" onclick="openForm(),FunctionJohnJohnson()" title="Contact">@</button></td>                                                
                                                 <td>+372 55 555 555</td>
                                                 <td><span class="status--approved">completed</span></td>
                                                 <td></td>
-                                                <th><a href="list-of-offers.html#offer_details_11">see details</a></th>
+                                                <td><a href="list-of-offers.html#offer_details_11"  title="Additional information" class="see-details">see details</a></td>
                                             </tr>
                                             <tr class="spacer"></tr>    
                                             <tr class="tr-shadow">                                                
@@ -137,28 +147,28 @@
                                                 <td>2021040060</td>
                                                 <td>30.05.2021</td>
                                                 <td></td>
-                                                <td><button hidden class="open-button" onclick="openForm()" title="Contact">@</button></td> 
+                                                <td><button hidden class="open-button" onclick="openForm()" title="Contact" class="see-details">@</button></td> 
                                                 <td></td>
                                                 <td><span class="status--declined">cancelled</span></td>
                                                 <td><i>problem with payment</i></td>
-                                                <th><a href="list-of-offers.html#offer_details_17">see details</a></th>
+                                                <td><a href="list-of-offers.html#offer_details_17"  title="Additional information" class="see-details">see details</a></td>
                                             </tr>
                                             <tr class="spacer"></tr>
                                             <tr class="tr-shadow">                                                
                                                 <td><a href=#><i class="fa fa-arrow-down" title="Download invoice"></i></a></td>
                                                 <td>2021040061</td>
                                                 <td>30.05.2021</td>
-                                                <td>John Johnson</td>
-                                                <td><button class="open-button" onclick="openForm()" title="Contact">@</button></td> 
+                                                <td class="event_manager">Kevin Johnson</td>
+                                                <td><button class="open-button" onclick="openForm(),FunctionKevinJohnson()" title="Contact">@</button></td> 
                                                 <td>+372 55 555 555</td>
                                                 <td><span class="status--waiting">upcoming</span></td>
                                                 <td></td>
-                                                <th><a href="list-of-offers.html#offer_details_17">see details</a></th>
+                                                <td><a href="list-of-offers.html#offer_details_17"  title="Additional information" class="see-details">see details</a></td>
                                             </tr>
                                             <tr class="spacer"></tr>                         
                                         </tbody>
                                     </table>
-                                </div>
+                                </div>                                
                                 <!-- END DATA TABLE -->                         
                                 <script>
                                  function openForm() {
@@ -167,7 +177,43 @@
                                   
                                   function closeForm() {
                                     document.getElementById("Message_window").style.display = "none";
+                                    document.getElementById("JohnJohnson").style.display = "none";
+                                    document.getElementById("KevinJohnson").style.display = "none";
+                                    document.getElementById("JohnJohnsonImg").style.display = "none";
+                                    document.getElementById("KevinJohnsonImg").style.display = "none";
+                                    document.getElementById("JohnJohnsonImgTiny").style.display = "none";
+                                    document.getElementById("KevinJohnsonImgTiny").style.display = "none";
                                   }
+                                </script>
+                                <script>
+                                    function FunctionJohnJohnson() {
+                                        document.getElementById("KevinJohnson").style.display = "none";
+                                        document.getElementById("KevinJohnsonImg").style.display = "none";
+                                        document.getElementById("JohnJohnsonImg").style.display = "block";
+                                        document.getElementById("KevinJohnsonImgTiny").style.display = "none";
+                                        document.getElementById("JohnJohnsonImgTiny").style.display = "block";
+                                        var x = document.getElementById("JohnJohnson");
+                                            if (x.style.display === "none") {
+                                                x.style.display = "block";
+                                                } else {
+                                                x.style.display = "block";
+                                                    }
+                                                };                                        
+                                </script>
+                                <script>
+                                    function FunctionKevinJohnson() {
+                                        document.getElementById("JohnJohnson").style.display = "none";  
+                                        document.getElementById("KevinJohnsonImg").style.display = "block";        
+                                        document.getElementById("JohnJohnsonImg").style.display = "none";             
+                                        document.getElementById("KevinJohnsonImgTiny").style.display = "block";        
+                                        document.getElementById("JohnJohnsonImgTiny").style.display = "none";                    
+                                        var x = document.getElementById("KevinJohnson");
+                                            if (x.style.display === "none") {
+                                                x.style.display = "block";
+                                                } else {
+                                                x.style.display = "block";
+                                                    }
+                                                }   ;                                  
                                 </script>
                                 <div class="chat-popup" id="Message_window"> <!--class="col-lg-6"-->
                                     <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
@@ -191,11 +237,13 @@
                                                     <div class="au-chat-info">
                                                         <div class="avatar-wrap online">
                                                             <div class="avatar avatar--small">
-                                                                <img src="images/icon/avatar-02.jpg" alt="John Johnson">
+                                                                <img src="images/icon/avatar-04.jpg" alt="John Johnson" id="JohnJohnsonImg" class="popup">
+                                                                <img src="images/icon/avatar-05.jpg" alt="Kevin Johnson" id="KevinJohnsonImg" class="popup"> 
                                                             </div>
                                                         </div>
-                                                        <span class="nick">
-                                                            <a href="#">John Johnson</a>
+                                                        <span class="nick"> 
+                                                            <p id="JohnJohnson" class="popup">John Johnson</p>       
+                                                            <p id="KevinJohnson" class="popup">Kevin Johnson</p>                         
                                                         </span>
                                                     </div>
                                                 </div>
@@ -204,7 +252,8 @@
                                                         <span class="mess-time">12 Min ago</span>
                                                         <div class="recei-mess__inner">
                                                             <div class="avatar avatar--tiny">
-                                                                <img src="images/icon/avatar-02.jpg" alt="John Johnson">
+                                                                <img src="images/icon/avatar-04.jpg" alt="John Johnson" id="JohnJohnsonImgTiny" class="popup"> 
+                                                                <img src="images/icon/avatar-05.jpg" alt="Kevin Johnson" id="KevinJohnsonImgTiny" class="popup">                                                                
                                                             </div>
                                                             <div class="recei-mess-list">
                                                                 <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>

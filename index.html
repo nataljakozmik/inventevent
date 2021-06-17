@@ -49,9 +49,16 @@
                         <div class="login-form">
                             <form action="" method="post">
                                 <div class="form-group">
+                                    <p id="Message"></p>
+                                    <br>                                    
                                     <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
-                                </div>
+                                    <select name="select" id="select" class="form-control">
+                                        <option value="1">Email</option>
+                                        <option value="./make-a-request.html">client@email.com</option>
+                                        <option value="./list-of-requests-sp.html">service_provider@email.com</option>
+                                        <option value="./list-of-orders-em.html">event_manager@email.com</option>
+                                    </select>                                    
+                                </div>                                
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
@@ -64,8 +71,24 @@
                                         <a href="forget-pass.html">Forgotten Password?</a>
                                     </label>
                                 </div>
-                                    <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit"><a href="make-a-request.html">sign in</a></button>
+                                <div>
+                                    <button class="au-btn au-btn--block au-btn--green m-b-20" onclick="SignIn()" title="Sign in"  type="button">sign in</button>
+                                    <script>
+                                        function SignIn() {
+                                                    var sel = document.getElementById('select');                                                    
+                                                    if (sel.value === "1") {
+                                                        myFunctionMessage();
+                                                    } else {             
+                                                        var option = sel.options[sel.selectedIndex].value;                                                                                                                           
+                                                        window.open(option, "_self");
+                                                    }
+                                                }
+                                    </script>
                                 </div>
+                                <script>
+                                    function myFunctionMessage() {
+                                        document.getElementById("Message").innerHTML = "Please enter your user name and password or register.";}
+                                </script>   
                             </form>
                             <div class="register-link">
                                 <p>
